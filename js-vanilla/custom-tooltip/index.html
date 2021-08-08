@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom tooltip</title>
+
+    <style>
+        /*Todos los elementos que tengan este prop*/
+        *[personalizado] {
+            position: relative;
+        }
+
+        *[personalizado]:hover::before {
+            content: attr(personalizado);
+            position: absolute;
+            top: 100%;
+            font-size: .6em;
+            font-weight: lighter;
+            border: 1px solid #ddd;
+            padding: .4rem;
+        }
+    </style>
+</head>
+<body>
+
+<!--Tooltip nativo-->
+<h2 title="Uso title">Soy un tooltip simple</h2>
+
+
+
+<!--Tooltip personalizado-->
+<h2 personalizado="Saludos">Soy un tooltip personalizado</h2>
+
+
+</body>
+</html>
